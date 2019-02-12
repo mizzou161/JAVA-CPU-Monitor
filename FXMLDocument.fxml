@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="616.0" maxWidth="859.0" prefHeight="518.0" prefWidth="820.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="amg629cpumonitor.FXMLDocumentController">
+  <children>
+    <Label fx:id="label" layoutX="61.0" layoutY="294.0" prefHeight="55.0" prefWidth="122.0">
+      <font>
+        <Font name="Ebrima Bold" size="36.0" />
+      </font>
+    </Label>
+    <Button fx:id="record" layoutX="135.0" layoutY="349.0" mnemonicParsing="false" onAction="#recordButtonAction" text="Record" />
+    <Button fx:id="stop" layoutX="43.0" layoutY="349.0" mnemonicParsing="false" onAction="#stopButtonAction" style="-fx-background-color: red;" text="Stop" />
+    <ImageView id="imageID" fitHeight="200.0" fitWidth="200.0" layoutX="22.0" layoutY="82.0">
+      <image>
+        <Image url="@gauge.png" />
+      </image>
+    </ImageView>
+    <ImageView id="rotateThis" fx:id="handImage" fitHeight="200.0" fitWidth="181.0" layoutX="31.0" layoutY="82.0" rotate="-165.0">
+      <image>
+        <Image url="@hand.png" />
+      </image>
+      <viewport>
+        <Rectangle2D />
+      </viewport>
+    </ImageView>
+    <VBox id="OS" layoutX="252.0" layoutY="82.0" prefHeight="301.0" prefWidth="286.0">
+      <children>
+        <Label fx:id="label1" alignment="TOP_CENTER" text="--:--%">
+          <font>
+            <Font size="20.0" fx:id="x1" />
+          </font>
+        </Label>
+        <Label fx:id="label2" font="$x1" text="--:--%" />
+        <Label fx:id="label3" font="$x1" text="--:--%" />
+        <Label fx:id="memory" prefHeight="72.0" prefWidth="286.0" wrapText="true">
+          <font>
+            <Font size="15.0" fx:id="x2" />
+          </font>
+        </Label>
+        <Label id="memory" fx:id="uptime" font="$x2" prefHeight="72.0" prefWidth="286.0" />
+        <Label id="memory" fx:id="Os" font="$x2" prefHeight="36.0" prefWidth="362.0" />
+      </children>
+    </VBox>
+    <TextArea fx:id="diskInfo" editable="false" layoutX="550.0" layoutY="14.0" prefHeight="480.0" prefWidth="248.0" wrapText="true" />
+  </children>
+</AnchorPane>
